@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.sql.*;
+//This test make sure that all browsers can run on this code .
 
 public class UploadBrowsers {
 

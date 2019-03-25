@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.concurrent.TimeUnit;
 
+//This test Upload the API string from DataBase on a RemoteSQL And also convert it from address to coordinates and also search for those coordinates in the google maps search box.
 
 public class  API {
 
@@ -19,7 +20,7 @@ public class  API {
 
 
     public static void API_Locations(WebDriver driver) throws IOException, ParserConfigurationException, SAXException, SQLException, ClassNotFoundException {
-
+//Connects to the SQL DB.
 
         Class.forName(StringConstant.classForName);
 
@@ -41,7 +42,7 @@ public class  API {
 
             String y = API;
 
-
+//Convert the Searched address to Coordinates.
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder().url(y).build();//Convert Location to coordinates
 
@@ -59,7 +60,7 @@ public class  API {
 
             System.out.println(location.get("lat").toString() + " " + location.get("lng").toString());
 
-
+//Placed the Coordinates into the Google Maps search box.
             driver.findElement(By.id("searchboxinput")).sendKeys(location.get("lat").toString() + " " + location.get("lng").toString());
 
 

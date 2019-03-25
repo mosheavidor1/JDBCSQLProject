@@ -2,6 +2,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+//This test make a compare between the actual website to the search from the API coordinates.
 import static org.junit.Assert.assertEquals;
 
 public class compareJson {
